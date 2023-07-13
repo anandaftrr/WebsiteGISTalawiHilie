@@ -23,17 +23,15 @@
 
 <body class="bg-gradient-primary">
 
-    <?php
-    if (isset($_GET['pesan'])) {
-        if ($_GET['pesan'] == "gagal") {
-            echo "Login gagal! username dan password salah!";
-        } else if ($_GET['pesan'] == "logout") {
-            echo "Anda telah berhasil logout";
-        } else if ($_GET['pesan'] == "belum_login") {
-            echo "Anda harus login untuk mengakses halaman admin";
+    <?php if (isset($_GET['pesan'])) {
+        if ($_GET['pesan'] == 'gagal') {
+            echo 'Login gagal! username dan password salah!';
+        } elseif ($_GET['pesan'] == 'logout') {
+            echo 'Anda telah berhasil logout';
+        } elseif ($_GET['pesan'] == 'belum_login') {
+            echo 'Anda harus login untuk mengakses halaman admin';
         }
-    }
-    ?>
+    } ?>
 
     <div class="container">
 
@@ -67,8 +65,7 @@
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
+                                                <label class="custom-control-label" for="customCheck">Remember Me</label>
                                             </div>
                                         </div>
                                         <input type="submit" value="LOGIN" class="btn btn-primary btn-user btn-block">

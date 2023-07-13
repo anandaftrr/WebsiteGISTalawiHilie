@@ -17,37 +17,37 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Edit Lokasi Wisata</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Edit Lokasi Sekolah</h6>
                         </div>
                         <div class="card-body">
 
                             <?php
                             include '../koneksi.php';
-                            $id = $_GET['id_wisata'];
+                            $id = $_GET['id_sekolah'];
                             $query = mysqli_query(
                                 $koneksi,
-                                "select * from wisata where id_wisata='$id'"
+                                "select * from sekolah where id_sekolah='$id'"
                             );
                             $data = mysqli_fetch_array($query);
                             ?>
 
                             <!-- </div> -->
                             <div class="panel-body">
-                                <form class="form-horizontal style-form" action="editaksi_wisata.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                                <form class="form-horizontal style-form" action="editaksi_sekolah.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
                                     <div class="mb-3"> 
-                                        <label for="exampleFormControlInput1" class="form-label">ID Wisata</label>
+                                        <label for="exampleFormControlInput1" class="form-label">ID Sekolah</label>
                                         <div class="mb-3">
-                                            <input name="id_wisata" type="text" id="id_wisata" class="form-control" value="<?php echo $data[
-                                                'id_wisata'
+                                            <input name="id_sekolah" type="text" id="id_sekolah" class="form-control" value="<?php echo $data[
+                                                'id_sekolah'
                                             ]; ?>" readonly />
                                             <!--<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>-->
                                         </div>
                                     </div>
                                     <div class="mb-3"> 
-                                    <label for="exampleFormControlInput1" class="form-label">Nama Wisata</label>
+                                    <label for="exampleFormControlInput1" class="form-label">Nama Sekolah</label>
                                         <div class="mb-3">
-                                            <input name="nama_wisata" type="text" id="nama_wisata" class="form-control" value="<?php echo $data[
-                                                'nama_wisata'
+                                            <input name="nama_sekolah" type="text" id="nama_sekolah" class="form-control" value="<?php echo $data[
+                                                'nama_sekolah'
                                             ]; ?>" required />
                                         </div>
                                     </div>
@@ -59,18 +59,11 @@
                                             ]; ?>" required />
                                         </div>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
+                                    <div class="mb-3"> 
+                                    <label for="exampleFormControlInput1" class="form-label">Akreditasi</label>
                                         <div class="mb-3">
-                                            <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3" type="text"> <?php echo $data[
-                                                'deskripsi'
-                                            ]; ?> </textarea>
-                                        </div>
-                                        <div class="mb-3"> 
-                                    <label for="exampleFormControlInput1" class="form-label">Harga Tiket</label>
-                                        <div class="mb-3">
-                                            <input name="harga_tiket" class="form-control" type="text" id="harga_tiket" type="text" value="<?php echo $data[
-                                                'harga_tiket'
+                                            <input name="akreditasi" class="form-control" id="akreditasi" type="text" value="<?php echo $data[
+                                                'akreditasi'
                                             ]; ?>" required />
                                         </div>
                                     </div>

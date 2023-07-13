@@ -32,7 +32,7 @@ include '../koneksi.php';
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
+                                        <tr  align="center">
                                             <th>No.</th>
                                             <th>Nama Sekolah</th>
                                             <th>Alamat</th>
@@ -53,7 +53,7 @@ include '../koneksi.php';
                                         while ($d = mysqli_fetch_array($data)) {
                                             $no++; ?>
                                             <tr>
-                                                <td><?php echo $no; ?></td>
+                                                <td  align="center"><?php echo $no; ?></td>
                                                 <td><b><a href="detaildata_sekolah.php?id_sekolah=<?php echo $d[
                                                     'id_sekolah'
                                                 ]; ?> "> <?php echo $d[
@@ -62,22 +62,22 @@ include '../koneksi.php';
                                                 <td><?php echo $d[
                                                     'alamat'
                                                 ]; ?></td>
-                                                <td>Rp.<?php echo $d[
+                                                <td align="center"><?php echo $d[
                                                     'akreditasi'
                                                 ]; ?></td>
-                                                <td><?php echo $d[
+                                                <td  align="center"><?php echo $d[
                                                     'latitude'
                                                 ]; ?></td>
-                                                <td><?php echo $d[
+                                                <td  align="center"><?php echo $d[
                                                     'longitude'
                                                 ]; ?></td>
-                                                <td>
-                                                    <a href="edit_data.php?id_sekolah=<?php echo $d[
+                                                <td  align="center">
+                                                    <a href="editdata_sekolah.php?id_sekolah=<?php echo $d[
                                                         'id_sekolah'
                                                     ]; ?> " class="btn-sm btn-primary"><span class="fas fa-edit"></a>
                                                 </td>
-                                                <td>    
-                                                    <a href="hapus_aksi.php?id_sekolah=<?php echo $d[
+                                                <td  align="center">    
+                                                    <a href="hapusaksi_sekolah.php?id_sekolah=<?php echo $d[
                                                         'id_sekolah'
                                                     ]; ?>" class="btn-sm btn-danger"><span class="fas fa-trash"></a>
                                                 </td>
@@ -89,7 +89,7 @@ include '../koneksi.php';
                         </tbody>
                         </table>
                         <br><br>
-                        <center><a href="tambahdata_sekolah.php"><button class="btn btn-primary" type="button" href="tambahdata_sekolah.php">Tambah Data</button></a></center>
+                        <center><a href="tambahdata_sekolah.php"><button class="btn btn-primary" type="button" href="tambahdata_wisata.php">Tambah Data</button></a></center>
                         <br>
                         </div>
                     </div>

@@ -32,7 +32,7 @@ include '../koneksi.php';
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
+                                        <tr  align="center">
                                             <th>No.</th>
                                             <th>Nama Wisata</th>
                                             <th>Alamat</th>
@@ -53,8 +53,8 @@ include '../koneksi.php';
                                         while ($d = mysqli_fetch_array($data)) {
                                             $no++; ?>
                                             <tr>
-                                                <td><?php echo $no; ?></td>
-                                                <td><b><a href="detail_data.php?id_wisata=<?php echo $d[
+                                                <td  align="center"><?php echo $no; ?></td>
+                                                <td><b><a href="detaildata_wisata.php?id_wisata=<?php echo $d[
                                                     'id_wisata'
                                                 ]; ?> "> <?php echo $d[
      'nama_wisata'
@@ -62,21 +62,21 @@ include '../koneksi.php';
                                                 <td><?php echo $d[
                                                     'alamat'
                                                 ]; ?></td>
-                                                <td>Rp.<?php echo $d[
+                                                <td  align="center">Rp.<?php echo $d[
                                                     'harga_tiket'
                                                 ]; ?></td>
-                                                <td><?php echo $d[
+                                                <td  align="center"><?php echo $d[
                                                     'latitude'
                                                 ]; ?></td>
-                                                <td><?php echo $d[
+                                                <td  align="center"><?php echo $d[
                                                     'longitude'
                                                 ]; ?></td>
-                                                <td>
+                                                <td  align="center">
                                                     <a href="editdata_wisata.php?id_wisata=<?php echo $d[
                                                         'id_wisata'
                                                     ]; ?> " class="btn-sm btn-primary"><span class="fas fa-edit"></a>
                                                 </td>
-                                                <td>    
+                                                <td  align="center">    
                                                     <a href="hapusaksi_wisata.php?id_wisata=<?php echo $d[
                                                         'id_wisata'
                                                     ]; ?>" class="btn-sm btn-danger"><span class="fas fa-trash"></a>
