@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include 'header.php'; ?>
 
 <!-- start banner Area -->
 <section class="banner-area relative">
@@ -6,10 +6,10 @@
   <div class="container">
     <div class="row fullscreen align-items-center justify-content-between">
       <div class="col-lg-6 col-md-6 banner-left">
-        <h6 class="text-white">SISTEM INFORMASI GEOGRAFIS WISATA</h6>
-        <h1 class="text-white">KABUPATEN BANYUMAS</h1>
+        <h6 class="text-white">SISTEM INFORMASI GEOGRAFIS</h6>
+        <h1 class="text-white">TALAWI HILIE</h1>
         <p class="text-white">
-          Sistem informasi ini merupakan aplikasi pemetaan geografis tempat wisata di wilayah Banyumas. Aplikasi ini memuat informasi dan lokasi dari tempat wisata di Banyumas.
+          Sistem informasi ini merupakan aplikasi pemetaan geografis Desa Talawi Hilie Kota Sawahlunto. Website ini memuat informasi dan lokasi terkait infrastruktur yang melingkupi  destinasi wisata, sekolah, puskesmas, juga kantor pemerintahan daerah/nasional di Desa Talawi Hilie.
         </p>
         <a href="#peta_wisata" class="primary-btn text-uppercase">Lihat Detail</a>
       </div>
@@ -61,14 +61,17 @@
 
             var officeLocations = [
               <?php
-              $data = file_get_contents('http://localhost/SIG-WISATA/ambildata.php');
+              $data = file_get_contents(
+                  'http://localhost/WebsiteTalawiHilie/ambildata.php'
+              );
               $no = 1;
               if (json_decode($data, true)) {
-                $obj = json_decode($data);
-                foreach ($obj->results as $item) {
-              ?>[<?php echo $item->id_wisata ?>, '<?php echo $item->nama_wisata ?>', '<?php echo $item->alamat ?>', <?php echo $item->longitude ?>, <?php echo $item->latitude ?>],
-              <?php
-                }
+                  $obj = json_decode($data);
+                  foreach (
+                      $obj->results
+                      as $item
+                  ) { ?>[<?php echo $item->id_wisata; ?>, '<?php echo $item->nama_wisata; ?>', '<?php echo $item->alamat; ?>', <?php echo $item->longitude; ?>, <?php echo $item->latitude; ?>],
+              <?php }
               }
               ?>
             ];
@@ -153,11 +156,11 @@
 
 
           <?php
-          include_once "countsma.php";
+          include_once 'countsma.php';
           $obj = json_decode($data);
-          $sman = "";
+          $sman = '';
           foreach ($obj->results as $item) {
-            $sman .= $item->sma;
+              $sman .= $item->sma;
           }
           ?>
 
@@ -166,11 +169,11 @@
             <br>
           </div>
           <?php
-          include_once "countsmk.php";
+          include_once 'countsmk.php';
           $obj2 = json_decode($data);
-          $smkn = "";
+          $smkn = '';
           foreach ($obj2->results as $item2) {
-            $smkn .= $item2->smk;
+              $smkn .= $item2->smk;
           }
           ?>
 
@@ -184,4 +187,4 @@
   <!-- End testimonial Area -->
 
 
-  <?php include "footer.php"; ?>
+  <?php include 'footer.php'; ?>

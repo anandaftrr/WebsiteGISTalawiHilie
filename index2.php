@@ -130,11 +130,11 @@
           </div>
 
           <?php
-          include_once "countsma.php";
+          include_once 'countsma.php';
           $obj = json_decode($data);
-          $sman = "";
+          $sman = '';
           foreach ($obj->results as $item) {
-            $sman .= $item->sma;
+              $sman .= $item->sma;
           }
           ?>
           <div class="col-lg-3 col-6 text-center">
@@ -142,11 +142,11 @@
             <p>Sekolah Menengah Atas</p>
           </div>
           <?php
-          include_once "countsmk.php";
+          include_once 'countsmk.php';
           $obj2 = json_decode($data);
-          $smkn = "";
+          $smkn = '';
           foreach ($obj2->results as $item2) {
-            $smkn .= $item2->smk;
+              $smkn .= $item2->smk;
           }
           ?>
           <div class="col-lg-3 col-6 text-center">
@@ -206,14 +206,17 @@
 
             var officeLocations = [
               <?php
-              $data = file_get_contents('http://localhost/SIG-MAP4/ambildata.php');
+              $data = file_get_contents(
+                  'http://localhost/SIG-MAP4/ambildata.php'
+              );
               $no = 1;
               if (json_decode($data, true)) {
-                $obj = json_decode($data);
-                foreach ($obj->results as $item) {
-              ?>[<?php echo $item->id_wisata ?>, '<?php echo $item->nama_wisata ?>', '<?php echo $item->alamat ?>', <?php echo $item->longitude ?>, <?php echo $item->latitude ?>],
-              <?php
-                }
+                  $obj = json_decode($data);
+                  foreach (
+                      $obj->results
+                      as $item
+                  ) { ?>[<?php echo $item->id_wisata; ?>, '<?php echo $item->nama_wisata; ?>', '<?php echo $item->alamat; ?>', <?php echo $item->longitude; ?>, <?php echo $item->latitude; ?>],
+              <?php }
               }
               ?>
             ];
@@ -297,12 +300,13 @@
                     </thead>
                     <tbody>
                       <?php
-                      $data = file_get_contents('http://localhost/SIG-MAP4/ambildata.php');
+                      $data = file_get_contents(
+                          'http://localhost/WebsiteTalawiHilie/ambildata.php'
+                      );
                       $no = 1;
                       if (json_decode($data, true)) {
-                        $obj = json_decode($data);
-                        foreach ($obj->results as $item) {
-                      ?>
+                          $obj = json_decode($data);
+                          foreach ($obj->results as $item) { ?>
                           <tr>
                             <td><?php echo $no; ?></td>
                             <td><?php echo $item->nama_wisata; ?></td>
@@ -315,11 +319,11 @@
                               </div>
                             </td>
                           </tr>
-                      <?php $no++;
-                        }
+                      <?php $no++;}
                       } else {
-                        echo "data tidak ada.";
-                      } ?>
+                          echo 'data tidak ada.';
+                      }
+                      ?>
 
                     </tbody>
                   </table>

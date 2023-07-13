@@ -14,4 +14,4 @@ $longitude = $_POST['longitude'];
 mysqli_query($koneksi, "insert into wisata values('','$nama','$alamat','$deskripsi','$harga_tiket','$latitude','$longitude')");
 
 // mengalihkan halaman kembali ke index.php
-header("location:tampil_data.php");
+header("location:tampildata_wisata.php");

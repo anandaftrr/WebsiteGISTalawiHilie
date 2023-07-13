@@ -4,9 +4,9 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon ">
-            <img class="rounded-circle" src="img/banyumas.png" width="45px" height="45px" alt="...">
+            <img src="img/sawahlunto.png" width="45px" height="55px" alt="...">
         </div>
-        <div class="sidebar-brand-text mx-3">SIG Wisata Banyumas</div>
+        <div class="sidebar-brand-text mx-3">Talawi Hilie</div>
 
     </a>
 
@@ -26,16 +26,29 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="tampil_data.php">
-            <i class="fas fa-fw fa-user-friends"></i>
+        <a class="nav-link" href="tampildata_wisata.php">
+            <i class="fa fa-location-arrow"></i>
             <span>Data Wisata</span></a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="tambah_data.php">
-            <i class="fas fa-fw fa-user-friends"></i>
-            <span>Tambah Data</span></a>
+        <a class="nav-link" href="tampildata_sekolah.php">
+            <i class="fa fa-location-arrow"></i>
+            <span>Data Sekolah</span></a>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="tampildata_puskesmas.php">
+            <i class="fa fa-location-arrow"></i>
+            <span>Data Puskesmas</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="tampildata_instansi.php">
+            <i class="fa fa-location-arrow"></i>
+            <span> Data Instansi</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider">
 

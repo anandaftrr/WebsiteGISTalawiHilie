@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include 'header.php'; ?>
 <!-- start banner Area -->
 <section class="about-banner relative">
   <div class="overlay overlay-bg"></div>
@@ -41,12 +41,13 @@
                 </thead>
                 <tbody>
                   <?php
-                  $data = file_get_contents('http://localhost/SIG-WISATA/ambildata.php');
+                  $data = file_get_contents(
+                      'http://localhost/WebsiteGISTalawiHilie/ambildata.php'
+                  );
                   $no = 1;
                   if (json_decode($data, true)) {
-                    $obj = json_decode($data);
-                    foreach ($obj->results as $item) {
-                  ?>
+                      $obj = json_decode($data);
+                      foreach ($obj->results as $item) { ?>
                       <tr>
                         <td><?php echo $no; ?></td>
                         <td><?php echo $item->nama_wisata; ?></td>
@@ -59,11 +60,11 @@
                           </div>
                         </td>
                       </tr>
-                  <?php $no++;
-                    }
+                  <?php $no++;}
                   } else {
-                    echo "data tidak ada.";
-                  } ?>
+                      echo 'data tidak ada.';
+                  }
+                  ?>
 
                 </tbody>
               </table>
@@ -76,4 +77,4 @@
   </div>
 </section>
 <!-- End about-info Area -->
-<?php include "footer.php"; ?>
+<?php include 'footer.php'; ?>
