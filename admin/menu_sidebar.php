@@ -26,21 +26,21 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="tampildata_wisata.php">
-            <i class="fa fa-location-arrow"></i>
-            <span>Data Wisata</span></a>
-    </li>
-
-    <li class="nav-item">
         <a class="nav-link" href="tampildata_sekolah.php">
             <i class="fa fa-location-arrow"></i>
             <span>Data Sekolah</span></a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="tampildata_puskesmas.php">
+        <a class="nav-link" href="tampildata_kesehatan.php">
             <i class="fa fa-location-arrow"></i>
-            <span>Data Puskesmas</span></a>
+            <span>Data Kesehatan</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="tampildata_masjid.php">
+            <i class="fa fa-location-arrow"></i>
+            <span> Data Rumah Ibadah</span></a>
     </li>
 
     <li class="nav-item">

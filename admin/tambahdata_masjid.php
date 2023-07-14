@@ -17,15 +17,15 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Tambah Lokasi Instansi</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Tambah Lokasi Rumah Ibadah</h6>
                         </div>
                         <div class="card-body">
 
                             <!-- Main content -->
-                            <form class="form-horizontal style-form" style="margin-top: 10px;" action="tambahaksi_instansi.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                            <form class="form-horizontal style-form" style="margin-top: 10px;" action="tambahaksi_masjid.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
                                 <div class="mb-3"> 
-                                    <label for="exampleFormControlInput1" class="form-label">Nama Instansi</label>
-                                    <input name="nama_instansi" type="text" class="form-control" id="nama_instansi">
+                                    <label for="exampleFormControlInput1" class="form-label">Nama Rumah Ibadah</label>
+                                    <input name="nama_masjid" type="text" class="form-control" id="nama_masjid">
                                 </div>  
                                 <div class="mb-3"> 
                                     <label for="exampleFormControlInput1" class="form-label">Alamat</label>

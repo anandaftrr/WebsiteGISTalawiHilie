@@ -21,10 +21,10 @@ if (empty($_SESSION['username'])) {
                     <?php include 'menu_topbar.php'; ?>
 
                     <?php
-                    $id = $_GET['id_sekolah'];
+                    $id = $_GET['id_kesehatan'];
                     $query = mysqli_query(
                         $koneksi,
-                        "select * from sekolah where id_sekolah='$id'"
+                        "select * from kesehatan where id_kesehatan='$id'"
                     );
                     $data = mysqli_fetch_array($query);
                     ?>
@@ -37,7 +37,7 @@ if (empty($_SESSION['username'])) {
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Detail Lokasi Sekolah</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Detail Lokasi Infrastruktur Kesehatan</h6>
                         </div>
                         <div class="card-body">
 
@@ -45,22 +45,15 @@ if (empty($_SESSION['username'])) {
                             <div class="panel-body">
                                 <table id="example" class="table table-hover table-bordered">
                                     <tr>
-                                        <td width="250">Nama Sekolah</td>
+                                        <td width="250">Nama Infrastruktur</td>
                                         <td width="550"><?php echo $data[
-                                            'nama_sekolah'
+                                            'nama_kesehatan'
                                         ]; ?></td>
                                     </tr>
                                     <tr>
                                         <td>Alamat</td>
                                         <td><?php echo $data['alamat']; ?></td>
                                     </tr>
-                                    <tr>
-                                        <td>Akreditasi</td>
-                                        <td><?php echo $data[
-                                            'akreditasi'
-                                        ]; ?></td>
-                                    </tr>
-                                    <tr>
                                         <td>Latitude</td>
                                         <td><?php echo $data[
                                             'latitude'

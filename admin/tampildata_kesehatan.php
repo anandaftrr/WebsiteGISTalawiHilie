@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['status'] != 'login') {
-    header('location:../tampildata_wisata.php?pesan=belum_login');
+    header('location:../tampildata_kesehatan.php?pesan=belum_login');
 }
 include '../koneksi.php';
 ?>
@@ -26,7 +26,7 @@ include '../koneksi.php';
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <center><h6 class="m-0 font-weight-bold text-primary">LOKASI WISATA TALAWI HILIE</h6></center>
+                            <center><h6 class="m-0 font-weight-bold text-primary">LOKASI INFRASTRUKTUR KESEHATAN TALAWI HILIE</h6></center>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -34,9 +34,8 @@ include '../koneksi.php';
                                     <thead>
                                         <tr  align="center">
                                             <th>No.</th>
-                                            <th>Nama Wisata</th>
+                                            <th>Nama Infrastruktur</th>
                                             <th>Alamat</th>
-                                            <th>Harga Tiket</th>
                                             <th>Latitude</th>
                                             <th>Longitude</th>
                                             <th>Edit</th>
@@ -48,22 +47,19 @@ include '../koneksi.php';
                                         $no = 0;
                                         $data = mysqli_query(
                                             $koneksi,
-                                            'select * from wisata'
+                                            'select * from kesehatan'
                                         );
                                         while ($d = mysqli_fetch_array($data)) {
                                             $no++; ?>
                                             <tr>
                                                 <td  align="center"><?php echo $no; ?></td>
-                                                <td><b><a href="detaildata_wisata.php?id_wisata=<?php echo $d[
-                                                    'id_wisata'
+                                                <td><b><a href="detaildata_kesehatan.php?id_kesehatan=<?php echo $d[
+                                                    'id_kesehatan'
                                                 ]; ?> "> <?php echo $d[
-     'nama_wisata'
+     'nama_kesehatan'
  ]; ?> </a> </b></td>
                                                 <td><?php echo $d[
                                                     'alamat'
-                                                ]; ?></td>
-                                                <td  align="center">Rp.<?php echo $d[
-                                                    'harga_tiket'
                                                 ]; ?></td>
                                                 <td  align="center"><?php echo $d[
                                                     'latitude'
@@ -72,13 +68,13 @@ include '../koneksi.php';
                                                     'longitude'
                                                 ]; ?></td>
                                                 <td  align="center">
-                                                    <a href="editdata_wisata.php?id_wisata=<?php echo $d[
-                                                        'id_wisata'
+                                                    <a href="editdata_kesehatan.php?id_kesehatan=<?php echo $d[
+                                                        'id_kesehatan'
                                                     ]; ?> " class="btn-sm btn-primary"><span class="fas fa-edit"></a>
                                                 </td>
                                                 <td  align="center">    
-                                                    <a href="hapusaksi_wisata.php?id_wisata=<?php echo $d[
-                                                        'id_wisata'
+                                                    <a href="hapusaksi_kesehatan.php?id_kesehatan=<?php echo $d[
+                                                        'id_kesehatan'
                                                     ]; ?>" class="btn-sm btn-danger"><span class="fas fa-trash"></a>
                                                 </td>
                                             </tr>
@@ -89,7 +85,7 @@ include '../koneksi.php';
                         </tbody>
                         </table>
                         <br><br>
-                        <center><a href="tambahdata_wisata.php"><button class="btn btn-primary" type="button" href="tambahdata_wisata.php">Tambah Data</button></a></center>
+                        <center><a href="tambahdata_kesehatan.php"><button class="btn btn-primary" type="button" href="tambahdata_kesehatan.php">Tambah Data</button></a></center>
                         <br>
                         </div>
                     </div>

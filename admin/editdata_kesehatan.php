@@ -23,31 +23,31 @@
 
                             <?php
                             include '../koneksi.php';
-                            $id = $_GET['id_wisata'];
+                            $id = $_GET['id_kesehatan'];
                             $query = mysqli_query(
                                 $koneksi,
-                                "select * from wisata where id_wisata='$id'"
+                                "select * from kesehatan where id_kesehatan='$id'"
                             );
                             $data = mysqli_fetch_array($query);
                             ?>
 
                             <!-- </div> -->
                             <div class="panel-body">
-                                <form class="form-horizontal style-form" action="editaksi_wisata.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                                <form class="form-horizontal style-form" action="editaksi_kesehatan.php" method="post" enctype="multipart/form-data" name="form1" id="form1">
                                     <div class="mb-3"> 
-                                        <label for="exampleFormControlInput1" class="form-label">ID Wisata</label>
+                                        <label for="exampleFormControlInput1" class="form-label">ID Kesehatan</label>
                                         <div class="mb-3">
-                                            <input name="id_wisata" type="text" id="id_wisata" class="form-control" value="<?php echo $data[
-                                                'id_wisata'
+                                            <input name="id_kesehatan" type="text" id="id_kesehatan" class="form-control" value="<?php echo $data[
+                                                'id_kesehatan'
                                             ]; ?>" readonly />
                                             <!--<span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>-->
                                         </div>
                                     </div>
                                     <div class="mb-3"> 
-                                    <label for="exampleFormControlInput1" class="form-label">Nama Wisata</label>
+                                    <label for="exampleFormControlInput1" class="form-label">Nama Kesehatan</label>
                                         <div class="mb-3">
-                                            <input name="nama_wisata" type="text" id="nama_wisata" class="form-control" value="<?php echo $data[
-                                                'nama_wisata'
+                                            <input name="nama_kesehatan" type="text" id="nama_kesehatan" class="form-control" value="<?php echo $data[
+                                                'nama_kesehatan'
                                             ]; ?>" required />
                                         </div>
                                     </div>
@@ -56,21 +56,6 @@
                                         <div class="mb-3">
                                             <input name="alamat" class="form-control" id="alamat" type="text" value="<?php echo $data[
                                                 'alamat'
-                                            ]; ?>" required />
-                                        </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-                                        <div class="mb-3">
-                                            <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3" type="text"> <?php echo $data[
-                                                'deskripsi'
-                                            ]; ?> </textarea>
-                                        </div>
-                                        <div class="mb-3"> 
-                                    <label for="exampleFormControlInput1" class="form-label">Harga Tiket</label>
-                                        <div class="mb-3">
-                                            <input name="harga_tiket" class="form-control" type="text" id="harga_tiket" type="text" value="<?php echo $data[
-                                                'harga_tiket'
                                             ]; ?>" required />
                                         </div>
                                     </div>
