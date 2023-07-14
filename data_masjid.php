@@ -6,9 +6,9 @@
     <div class="row d-flex align-items-center justify-content-center">
       <div class="about-content col-lg-12">
         <h1 class="text-white">
-          Data Wisata
+          Data Rumah Ibadah
         </h1>
-        <p class="text-white link-nav">Halaman ini memuat informasi Tempat Wisata di Kabupaten Banyumas</p>
+        <p class="text-white link-nav">Halaman ini memuat informasi lokasi rumah ibadah yang meliputi mesjid dan musholla di Desa Talawi Hilie</p>
       </div>
     </div>
   </div>

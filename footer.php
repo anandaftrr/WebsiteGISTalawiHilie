@@ -7,7 +7,8 @@
 					
 					<div class="row footer-bottom d-flex justify-content-between align-items-center">
 						<p class="col-lg-8 col-sm-12 footer-text m-0">
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved || Sistem Informasi Geografis UMP</i> by SIG ARIEF || FAUZAN</a>
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</i></a>
+						<p class="col-lg-8 col-sm-12 footer-text m-0">Sistem Informasi Geografis Talawi Hilie</p>
 </p>
 						<div class="col-lg-4 col-sm-12 footer-social">
 							<a href="#"><i class="fa fa-facebook"></i></a>

@@ -9,7 +9,7 @@
         <h6 class="text-white">SISTEM INFORMASI GEOGRAFIS</h6>
         <h1 class="text-white">TALAWI HILIE</h1>
         <p class="text-white">
-          Sistem informasi ini merupakan aplikasi pemetaan geografis Desa Talawi Hilie Kota Sawahlunto. Website ini memuat informasi dan lokasi terkait infrastruktur yang melingkupi  destinasi wisata, sekolah, puskesmas, juga kantor pemerintahan daerah/nasional di Desa Talawi Hilie.
+          Sistem informasi ini merupakan aplikasi pemetaan geografis Desa Talawi Hilie, Kecamatan Talawi, Kota Sawahlunto. Website ini memuat informasi dan lokasi terkait infrastruktur yang melingkupi sekolah, kesehatan, rumah ibadah, juga instansi daerah di Desa Talawi Hilie.
         </p>
         <a href="#peta_wisata" class="primary-btn text-uppercase">Lihat Detail</a>
       </div>
@@ -33,7 +33,7 @@
       <div class="container">
 
         <div class="title text-center">
-          <h1 class="mb-10">Peta Lokasi Wisata</h1>
+          <h1 class="mb-10">Peta Lokasi Talawi Hilie</h1>
           <br>
         </div>
 
@@ -62,7 +62,7 @@
             var officeLocations = [
               <?php
               $data = file_get_contents(
-                  'http://localhost/WebsiteTalawiHilie/ambildata.php'
+                  'http://localhost/WebsiteGISTalawiHilie/ambildata_sekolah.php'
               );
               $no = 1;
               if (json_decode($data, true)) {
@@ -70,7 +70,7 @@
                   foreach (
                       $obj->results
                       as $item
-                  ) { ?>[<?php echo $item->id_wisata; ?>, '<?php echo $item->nama_wisata; ?>', '<?php echo $item->alamat; ?>', <?php echo $item->longitude; ?>, <?php echo $item->latitude; ?>],
+                  ) { ?>[<?php echo $item->id_sekolah; ?>, '<?php echo $item->nama_sekolah; ?>', '<?php echo $item->alamat; ?>','<?php echo $item->akreditasi; ?>', <?php echo $item->longitude; ?>, <?php echo $item->latitude; ?>],
               <?php }
               }
               ?>
@@ -93,7 +93,7 @@
                   '</div>' +
                   '<h5 id="firstHeading" class="firstHeading">' + office[1] + '</h5>' +
                   '<div id="bodyContent">' +
-                  '<a href=detail.php?id_wisata=' + office[0] + '>Info Detail</a>' +
+                  '<a href=detail.php?id_sekolah=' + office[0] + '>Info Detail</a>' +
                   '</div>' +
                   '</div>';
 
@@ -136,7 +136,7 @@
         <div class="menu-content pb-70 col-lg-8">
           <div class="title text-center">
             <h1 class="mb-10">Jangkauan Peta</h1>
-            <p>Aplikasi pemetaan geografis Wisata di kabupaten Banyumas ini memuat informasi dan lokasi dari Wisata ALam dan WIsata Kuliner di Banyumas. Pemetaan diambil dari data lokasi Google Maps dan data dari website masing-masing tempat wisata. Aplikasi ini memuat sejumlah informasi mengenai :
+            <p>Aplikasi pemetaan geografis infrastruktur di Desa Talawi Hilie, Kecamatan Talawi, Kota Sawahlunto ini memuat informasi dan lokasi dari infrastruktur sekolah, kesehatan, rumah ibadah, juga instansi daerah yang berfungsi untuk memberikan kemudahan akses dan pengelanan wilayah geolokasi dari infrastruktur penting di Desa Talawi Hilie.
             </p>
           </div>
         </div>
@@ -145,18 +145,20 @@
       <!-- End other-issue Area -->
 
     </div>
-    </div> <!-- ======= Counts Section ======= -->
+    </div> 
+    
+    <!-- ======= Counts Section Sekolah ======= -->
     <section id="counts">
       <div class="container">
         <div class="title text-center">
-          <h1 class="mb-10">Jumlah Tempat Wisata</h1>
+          <h1 class="mb-10">Jumlah Sekolah</h1>
           <br>
         </div>
         <div class="row d-flex justify-content-center">
 
 
           <?php
-          include_once 'countsma.php';
+          include_once 'countsma_sekolah.php';
           $obj = json_decode($data);
           $sman = '';
           foreach ($obj->results as $item) {
@@ -169,7 +171,7 @@
             <br>
           </div>
           <?php
-          include_once 'countsmk.php';
+          include_once 'countsmk_sekolah.php';
           $obj2 = json_decode($data);
           $smkn = '';
           foreach ($obj2->results as $item2) {
@@ -179,9 +181,117 @@
 
 
         </div>
+        
 
       </div>
     </section><!-- End Counts Section -->
+
+    <!-- ======= Counts Section Kesehatan ======= -->
+    <section id="counts">
+      <div class="container">
+        <div class="title text-center">
+          <h1 class="mb-10">Jumlah Infrastruktur Kesehatan</h1>
+          <br>
+        </div>
+        <div class="row d-flex justify-content-center">
+
+
+          <?php
+          include_once 'countsma_kesehatan.php';
+          $obj = json_decode($data);
+          $sman = '';
+          foreach ($obj->results as $item) {
+              $sman .= $item->sma;
+          }
+          ?>
+
+          <div class="text-center">
+            <h1><span data-toggle="counter-up"><?php echo $sman; ?></span></h1>
+            <br>
+          </div>
+          <?php
+          include_once 'countsmk_kesehatan.php';
+          $obj2 = json_decode($data);
+          $smkn = '';
+          foreach ($obj2->results as $item2) {
+              $smkn .= $item2->smk;
+          }
+          ?>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Counts Section Rumah Ibadah ======= -->
+    <section id="counts">
+      <div class="container">
+        <div class="title text-center">
+          <h1 class="mb-10">Jumlah Rumah Ibadah</h1>
+          <br>
+        </div>
+        <div class="row d-flex justify-content-center">
+
+
+          <?php
+          include_once 'countsma_masjid.php';
+          $obj = json_decode($data);
+          $sman = '';
+          foreach ($obj->results as $item) {
+              $sman .= $item->sma;
+          }
+          ?>
+
+          <div class="text-center">
+            <h1><span data-toggle="counter-up"><?php echo $sman; ?></span></h1>
+            <br>
+          </div>
+          <?php
+          include_once 'countsmk_masjid.php';
+          $obj2 = json_decode($data);
+          $smkn = '';
+          foreach ($obj2->results as $item2) {
+              $smkn .= $item2->smk;
+          }
+          ?>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+    
+    <!-- ======= Counts Section Instansi ======= -->
+    <section id="counts">
+      <div class="container">
+        <div class="title text-center">
+          <h1 class="mb-10">Jumlah Instansi</h1>
+          <br>
+        </div>
+        <div class="row d-flex justify-content-center">
+
+
+          <?php
+          include_once 'countsma_instansi.php';
+          $obj = json_decode($data);
+          $sman = '';
+          foreach ($obj->results as $item) {
+              $sman .= $item->sma;
+          }
+          ?>
+
+          <div class="text-center">
+            <h1><span data-toggle="counter-up"><?php echo $sman; ?></span></h1>
+            <br>
+          </div>
+          <?php
+          include_once 'countsmk_instansi.php';
+          $obj2 = json_decode($data);
+          $smkn = '';
+          foreach ($obj2->results as $item2) {
+              $smkn .= $item2->smk;
+          }
+          ?>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+    
+
     </div>
   </section>
   <!-- End testimonial Area -->

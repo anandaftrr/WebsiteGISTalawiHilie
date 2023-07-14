@@ -15,9 +15,9 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>SIG WISATA BANYUMAS</title>
+	<title>Lokasi Infrastruktur Talawi Hilie</title>
 
-	<link rel="icon" href="admin/img/banyumas.png">
+	<link rel="icon" href="admin/img/sawahlunto.png" width="50px" height="60px">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<!--
@@ -49,12 +49,15 @@
 		<div class="container main-menu">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="index.php"><img src="admin/img/banyumas.png" width="50px" height="50px" alt="" title="" /></a>
+					<a href="index.php"><img src="admin/img/sawahlunto.png" width="50px" height="60px" alt="" title="" /></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li><a href="index.php">Home</a></li>
-						<li><a href="data_wisata.php">Data Wisata</a></li>
+						<li><a href="data_sekolah.php">Data Sekolah</a></li>
+						<li><a href="data_kesehatan.php">Data Kesehatan</a></li>
+						<li><a href="data_masjid.php">Data Rumah Ibadah</a></li>
+						<li><a href="data_instansi.php">Data Instansi</a></li>
 						<li><a href="admin/login.php">Login Admin</a></li>
 
 					</ul>
