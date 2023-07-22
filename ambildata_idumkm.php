@@ -1,6 +1,6 @@
 <?php
 include 'koneksi.php';
-($Q = mysqli_query($koneksi, 'SELECT * FROM masjid where id_masjid=' . $id)) or
+($Q = mysqli_query($koneksi, 'SELECT * FROM umkm where id_umkm=' . $id)) or
     die(mysqli_error());
 if ($Q) {
     $posts = [];

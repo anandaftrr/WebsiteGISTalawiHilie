@@ -54,7 +54,7 @@
                         <td><?php echo $item->alamat; ?></td>
                         <td class="ctr"  align="center">
                           <div class="btn-group">
-                            <a href="detail_masjid.php?id_masjid=<?php echo $item->id_sekolah; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
+                            <a href="detail_masjid.php?id_masjid=<?php echo $item->id_masjid; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
                               <i class="fa fa-map-marker"> </i> Detail dan Lokasi</a>&nbsp;
                           </div>
                         </td>

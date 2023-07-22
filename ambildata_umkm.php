@@ -1,7 +1,6 @@
 <?php
 include 'koneksi.php';
-($Q = mysqli_query($koneksi, 'SELECT * FROM masjid where id_masjid=' . $id)) or
-    die(mysqli_error());
+$Q = mysqli_query($koneksi, 'SELECT * FROM umkm');
 if ($Q) {
     $posts = [];
     if (mysqli_num_rows($Q)) {
@@ -10,4 +9,5 @@ if ($Q) {
         }
     }
     $data = json_encode(['results' => $posts]);
+    echo $data;
 }

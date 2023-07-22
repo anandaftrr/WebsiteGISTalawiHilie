@@ -49,6 +49,12 @@
             <span> Data Instansi</span></a>
     </li>
 
+    <li class="nav-item">
+        <a class="nav-link" href="tampildata_umkm.php">
+            <i class="fa fa-location-arrow"></i>
+            <span> Data UMKM</span></a>
+    </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider">
 

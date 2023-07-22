@@ -58,6 +58,7 @@
 						<li><a href="data_kesehatan.php">Data Kesehatan</a></li>
 						<li><a href="data_masjid.php">Data Rumah Ibadah</a></li>
 						<li><a href="data_instansi.php">Data Instansi</a></li>
+						<li><a href="data_umkm.php">Data UMKM</a></li>
 						<li><a href="admin/login.php">Login Admin</a></li>
 
 					</ul>

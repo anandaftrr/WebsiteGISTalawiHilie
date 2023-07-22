@@ -6,9 +6,9 @@
     <div class="row d-flex align-items-center justify-content-center">
       <div class="about-content col-lg-12">
         <h1 class="text-white">
-          Data Infrastruktur Kesehatan
+          Data UMKM
         </h1>
-        <p class="text-white link-nav">Halaman ini memuat informasi lokasi kesehatan yang meliputi puskesmas, posyandu, posbindu, dan poslansia di Desa Talawi Hilie</p>
+        <p class="text-white link-nav">Halaman ini memuat informasi lokasi UMKM yang berada di Desa Talawi Hilie</p>
       </div>
     </div>
   </div>
@@ -34,7 +34,8 @@
                                     <thead>
                                         <tr  align="center">
                                             <th width="10%">No.</th>
-                                            <th width="30%">Nama Infrastruktur Kesehatan</th>
+                                            <th width="20%">Nama UMKM</th>
+                                            <th width="20%">Sosial Media</th>
                                             <th width="30%">Alamat</th>
                                             <th width="20%">Lokasi</th>
                                         </tr>
@@ -42,7 +43,7 @@
                 <tbody>
                   <?php
                   $data = file_get_contents(
-                      'http://localhost/WebsiteGISTalawiHilie/ambildata_kesehatan.php'
+                      'http://localhost/WebsiteGISTalawiHilie/ambildata_umkm.php'
                   );
                   $no = 1;
                   if (json_decode($data, true)) {
@@ -50,11 +51,12 @@
                       foreach ($obj->results as $item) { ?>
                       <tr>
                         <td  align="center"><?php echo $no; ?></td>
-                        <td><?php echo $item->nama_kesehatan; ?></td>
-                        <td><?php echo $item->alamat; ?></td>
+                        <td><?php echo $item->nama_umkm; ?></td>
+                        <td><?php echo $item->sosmed; ?></td>
+                        <td  align="center"><?php echo $item->alamat; ?></td>
                         <td class="ctr"  align="center">
                           <div class="btn-group">
-                            <a href="detail_kesehatan.php?id_kesehatan=<?php echo $item->id_kesehatan; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
+                            <a href="detail_umkm.php?id_umkm=<?php echo $item->id_umkm; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
                               <i class="fa fa-map-marker"> </i> Detail dan Lokasi</a>&nbsp;
                           </div>
                         </td>

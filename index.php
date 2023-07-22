@@ -291,7 +291,40 @@
       </div>
     </section><!-- End Counts Section -->
     
+<!-- ======= Counts Section UMKM ======= -->
+<section id="counts">
+      <div class="container">
+        <div class="title text-center">
+          <h1 class="mb-10">Jumlah UMKM</h1>
+          <br>
+        </div>
+        <div class="row d-flex justify-content-center">
 
+
+          <?php
+          include_once 'countsma_umkm.php';
+          $obj = json_decode($data);
+          $sman = '';
+          foreach ($obj->results as $item) {
+              $sman .= $item->sma;
+          }
+          ?>
+
+          <div class="text-center">
+            <h1><span data-toggle="counter-up"><?php echo $sman; ?></span></h1>
+            <br>
+          </div>
+          <?php
+          include_once 'countsmk_umkm.php';
+          $obj2 = json_decode($data);
+          $smkn = '';
+          foreach ($obj2->results as $item2) {
+              $smkn .= $item2->smk;
+          }
+          ?>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
     </div>
   </section>
   <!-- End testimonial Area -->

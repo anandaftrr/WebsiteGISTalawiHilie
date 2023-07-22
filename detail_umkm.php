@@ -1,21 +1,23 @@
 <?php include 'header.php'; ?>
 <?php
-$id = $_GET['id_kesehatan'];
-include_once 'ambildata_idkesehatan.php';
+$id = $_GET['id_umkm'];
+include_once 'ambildata_idumkm.php';
 $obj = json_decode($data);
-$id_kesehatan = '';
-$nama_kesehatan = '';
+$id_umkm = '';
+$nama_umkm = '';
+$sosmed = '';
 $alamat = '';
 $lat = '';
 $long = '';
 foreach ($obj->results as $item) {
-    $id_kesehatan .= $item->id_kesehatan;
-    $nama_kesehatan .= $item->nama_kesehatan;
+    $id_umkm .= $item->id_umkm;
+    $nama_umkm .= $item->nama_umkm;
+    $sosmed .= $item->sosmed;
     $alamat .= $item->alamat;
     $lat .= $item->latitude;
     $long .= $item->longitude;
 }
-$title = 'Detail dan Lokasi : ' . $nama_kesehatan;
+$title = 'Detail dan Lokasi : ' . $nama_umkm;
 
 //include_once "header.php";
 ?>
@@ -34,7 +36,7 @@ $title = 'Detail dan Lokasi : ' . $nama_kesehatan;
     var contentString = '<div id="content">' +
       '<div id="siteNotice">' +
       '</div>' +
-      '<h1 id="firstHeading" class="firstHeading"><?php echo $nama_kesehatan; ?></h1>' +
+      '<h1 id="firstHeading" class="firstHeading"><?php echo $nama_umkm; ?></h1>' +
       '<div id="bodyContent">' +
       '<p><?php echo $alamat; ?></p>' +
       '</div>' +
@@ -65,7 +67,7 @@ $title = 'Detail dan Lokasi : ' . $nama_kesehatan;
     <div class="row d-flex align-items-center justify-content-center">
       <div class="about-content col-lg-12">
         <h1 class="text-white">
-          Detail Informasi Geografis Kesehatan
+          Detail Informasi Geografis UMKM
         </h1>
       </div>
     </div>
@@ -80,15 +82,21 @@ $title = 'Detail dan Lokasi : ' . $nama_kesehatan;
       <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
         <div class="panel panel-info panel-dashboard">
           <div class="panel-heading centered">
-            <h2 class="panel-title"><strong>Informasi Infrastruktur Kesehatan</strong></h4>
+            <h2 class="panel-title"><strong>Informasi UMKM </strong></h4>
           </div>
           <div class="panel-body">
             <br>
             <table class="table">
               <tr>
-                <td>Nama Infrastruktur Kesehatan</td>
+                <td>Nama UMKM</td>
                 <td>
-                  <h5><?php echo $nama_kesehatan; ?></h5>
+                  <h5><?php echo $nama_umkm; ?></h5>
+                </td>
+              </tr>
+              <tr>
+                <td>Sosial Media</td>
+                <td>
+                  <h5><?php echo $sosmed; ?></h5>
                 </td>
               </tr>
               <tr>
