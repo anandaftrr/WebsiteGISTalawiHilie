@@ -8,7 +8,7 @@
         <h1 class="text-white">
           Data Rumah Ibadah
         </h1>
-        <p class="text-white link-nav">Halaman ini memuat informasi lokasi rumah ibadah yang meliputi mesjid dan musholla di Desa Talawi Hilie</p>
+        <p class="text-white link-nav">Halaman ini memuat informasi lokasi rumah ibadah yang meliputi mesjid dan musholla di Desa Talawi Hilie</p>
       </div>
     </div>
   </div>
@@ -18,44 +18,43 @@
 <section class="about-info-area section-gap">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6 info-left">
+      <div class="col-lg-12 info-left">
         <img class="img-fluid" src="img/about/info-img.jpg" alt="">
       </div>
-
-      <div class="col-lg-30 into-right" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 into-centers" data-aos="fade-up" data-aos-delay="100">
 
         <div class="col-md-12">
           <div class="panel panel-info panel-dashboard">
             <div class="panel-heading centered">
 
             </div>
-            <div class="panel-body">
-              <table class="table table-bordered table-striped table-admin">
-                <thead>
-                  <tr>
-                    <th width="5%">No.</th>
-                    <th width="30%">Nama Wisata</th>
-                    <th width="30%">Alamat</th>
-                    <th width="20%">Harga Tiket</th>
-                  </tr>
-                </thead>
+            <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="250%" cellspacing="0">
+                                    <thead>
+                                        <tr  align="center">
+                                            <th width="10%">No.</th>
+                                            <th width="30%">Nama Rumah Ibadah</th>
+                                            <th width="30%">Alamat</th>
+                                            <th width="20%">Lokasi</th>
+                                        </tr>
+</thead>
                 <tbody>
                   <?php
                   $data = file_get_contents(
-                      'http://localhost/WebsiteGISTalawiHilie/ambildata.php'
+                      'http://localhost/WebsiteGISTalawiHilie/ambildata_masjid.php'
                   );
                   $no = 1;
                   if (json_decode($data, true)) {
                       $obj = json_decode($data);
                       foreach ($obj->results as $item) { ?>
                       <tr>
-                        <td><?php echo $no; ?></td>
-                        <td><?php echo $item->nama_wisata; ?></td>
+                        <td  align="center"><?php echo $no; ?></td>
+                        <td><?php echo $item->nama_masjid; ?></td>
                         <td><?php echo $item->alamat; ?></td>
-                        <td>Rp. <?php echo $item->harga_tiket; ?></td>
-                        <td class="ctr">
+                        <td class="ctr"  align="center">
                           <div class="btn-group">
-                            <a href="detail.php?id_wisata=<?php echo $item->id_wisata; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
+                            <a href="detail_masjid.php?id_masjid=<?php echo $item->id_sekolah; ?>" rel="tooltip" data-original-title="Lihat File" data-placement="top" class="btn btn-primary">
                               <i class="fa fa-map-marker"> </i> Detail dan Lokasi</a>&nbsp;
                           </div>
                         </td>

@@ -42,7 +42,7 @@
                 <tbody>
                   <?php
                   $data = file_get_contents(
-                      'http://localhost/WebsiteGISTalawiHilie/ambildata.php'
+                      'http://localhost/WebsiteGISTalawiHilie/ambildata_kesehatan.php'
                   );
                   $no = 1;
                   if (json_decode($data, true)) {

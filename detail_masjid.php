@@ -1,23 +1,21 @@
 <?php include 'header.php'; ?>
 <?php
-$id = $_GET['id_sekolah'];
-include_once 'ambildata_idsekolah.php';
+$id = $_GET['id_masjid'];
+include_once 'ambildata_idmasjid.php';
 $obj = json_decode($data);
-$id_sekolah = '';
-$nama_sekolah = '';
+$id_masjid = '';
+$nama_masjid = '';
 $alamat = '';
-$akreditasi = '';
 $lat = '';
 $long = '';
 foreach ($obj->results as $item) {
-    $id_sekolah .= $item->id_sekolah;
-    $nama_sekolah .= $item->nama_sekolah;
+    $id_masjid .= $item->id_masjid;
+    $nama_masjid .= $item->nama_masjid;
     $alamat .= $item->alamat;
-    $akreditasi .= $item->akreditasi;
     $lat .= $item->latitude;
     $long .= $item->longitude;
 }
-$title = 'Detail dan Lokasi : ' . $nama_sekolah;
+$title = 'Detail dan Lokasi : ' . $nama_masjid;
 
 //include_once "header.php";
 ?>
@@ -36,7 +34,7 @@ $title = 'Detail dan Lokasi : ' . $nama_sekolah;
     var contentString = '<div id="content">' +
       '<div id="siteNotice">' +
       '</div>' +
-      '<h1 id="firstHeading" class="firstHeading"><?php echo $nama_sekolah; ?></h1>' +
+      '<h1 id="firstHeading" class="firstHeading"><?php echo $nama_masjid; ?></h1>' +
       '<div id="bodyContent">' +
       '<p><?php echo $alamat; ?></p>' +
       '</div>' +
@@ -67,7 +65,7 @@ $title = 'Detail dan Lokasi : ' . $nama_sekolah;
     <div class="row d-flex align-items-center justify-content-center">
       <div class="about-content col-lg-12">
         <h1 class="text-white">
-          Detail Informasi Geografis Sekolah
+          Detail Informasi Geografis Rumah Ibadah
         </h1>
       </div>
     </div>
@@ -82,21 +80,15 @@ $title = 'Detail dan Lokasi : ' . $nama_sekolah;
       <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
         <div class="panel panel-info panel-dashboard">
           <div class="panel-heading centered">
-            <h2 class="panel-title"><strong>Informasi Sekolah </strong></h4>
+            <h2 class="panel-title"><strong>Informasi Rumah Ibadah</strong></h4>
           </div>
           <div class="panel-body">
             <br>
             <table class="table">
               <tr>
-                <td>Nama Sekolah</td>
+                <td>Nama Rumah Ibadah</td>
                 <td>
-                  <h5><?php echo $nama_sekolah; ?></h5>
-                </td>
-              </tr>
-              <tr>
-                <td>Akreditasi</td>
-                <td>
-                  <h5><?php echo $akreditasi; ?></h5>
+                  <h5><?php echo $nama_masjid; ?></h5>
                 </td>
               </tr>
               <tr>
