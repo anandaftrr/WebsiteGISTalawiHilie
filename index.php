@@ -46,8 +46,8 @@
             function initialize() {
 
               var mapOptions = {
-                zoom: 10.2,
-                center: new google.maps.LatLng(-7.4302745, 109.199404),
+                zoom: 13,
+                center: new google.maps.LatLng(-0.59992, 100.7276803),
                 disableDefaultUI: false
               };
 
