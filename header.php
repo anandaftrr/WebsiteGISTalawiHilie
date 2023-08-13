@@ -32,7 +32,7 @@
 	<link rel="stylesheet" href="travelista-master/css/nice-select.css">
 	<link rel="stylesheet" href="travelista-master/css/animate.min.css">
 	<link rel="stylesheet" href="travelista-master/css/owl.carousel.css">
-	<link rel="stylesheet" href="travelista-master/css/main.css">
+	<link rel="stylesheet" href="travelista-master/css/fix.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 

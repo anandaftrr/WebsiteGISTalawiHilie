@@ -34,7 +34,7 @@ $title = 'Detail dan Lokasi : ' . $nama_instansi;
     var contentString = '<div id="content">' +
       '<div id="siteNotice">' +
       '</div>' +
-      '<h1 id="firstHeading" class="firstHeading"><?php echo $nama_masjid; ?></h1>' +
+      '<h1 id="firstHeading" class="firstHeading"><?php echo $nama_instansi; ?></h1>' +
       '<div id="bodyContent">' +
       '<p><?php echo $alamat; ?></p>' +
       '</div>' +

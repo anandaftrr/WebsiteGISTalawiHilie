@@ -46,7 +46,7 @@
             function initialize() {
 
               var mapOptions = {
-                zoom: 13,
+                zoom: 15,
                 center: new google.maps.LatLng(-0.59992, 100.7276803),
                 disableDefaultUI: false
               };
@@ -93,7 +93,7 @@
                   '</div>' +
                   '<h5 id="firstHeading" class="firstHeading">' + office[1] + '</h5>' +
                   '<div id="bodyContent">' +
-                  '<a href=detail.php?id_sekolah=' + office[0] + '>Info Detail</a>' +
+                  '<a href=detail_sekolah.php?id_sekolah=' + office[0] + '>Info Detail</a>' +
                   '</div>' +
                   '</div>';
 
