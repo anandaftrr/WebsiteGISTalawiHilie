@@ -43,6 +43,7 @@
                                     <label for="exampleFormControlInput1" class="form-label">Longitude</label>
                                     <input name="longitude" type="text" class="form-control" id="longitude">
                                 </div>  
+                            
                                 <div class="form-group" style="margin-bottom: 20px;">
                                     <label class="col-sm-2 col-sm-4 control-label"></label>
                                     <div class="mb-3">
